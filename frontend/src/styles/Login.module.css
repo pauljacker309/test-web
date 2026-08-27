@@ -1,0 +1,108 @@
+.container {
+  min-height: calc(100vh - 73px);
+  display: grid;
+  place-items: center;
+  padding: var(--space-xl);
+  background: var(--surface-0);
+}
+
+.card {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  width: 100%;
+  max-width: 480px;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.demoAccounts {
+  background: var(--surface-3);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.demoTitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.demoList {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.demoItem {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.demoItem strong {
+  color: var(--accent);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.field {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input {
+  background: var(--surface-3);
+  border: 1px solid var(--surface-4);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  font-size: var(--text-base);
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--surface-4);
+}
+
+.submitBtn {
+  background: var(--accent);
+  color: var(--surface-0);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: var(--space-sm);
+}
+
+.submitBtn:hover {
+  background: var(--accent-dim);
+}

@@ -1,0 +1,243 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.clearBtn {
+  background: var(--surface-3);
+  color: var(--text-secondary);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.clearBtn:hover {
+  background: var(--surface-4);
+  color: var(--error);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--space-2xl);
+  display: grid;
+  gap: var(--space-xl);
+  place-items: center;
+}
+
+.empty p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+.shopBtn {
+  background: var(--accent);
+  color: var(--surface-0);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.shopBtn:hover {
+  background: var(--accent-dim);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.items {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.item {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto auto;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--surface-3);
+}
+
+.info {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.productName {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.productPrice {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--surface-3);
+  border-radius: var(--radius-full);
+  padding: var(--space-xs);
+}
+
+.quantityBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface-4);
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.quantityBtn:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--surface-0);
+}
+
+.quantityBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.quantityValue {
+  font-size: var(--text-base);
+  font-weight: 600;
+  min-width: 32px;
+  text-align: center;
+}
+
+.subtotal {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  min-width: 150px;
+  text-align: right;
+}
+
+.removeBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.removeBtn:hover {
+  background: var(--error);
+  color: var(--text-primary);
+}
+
+.summary {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: sticky;
+  top: calc(73px + var(--space-lg));
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.summaryTitle {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--surface-4);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.summaryTotal {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.checkoutBtn {
+  background: var(--accent);
+  color: var(--surface-0);
+  padding: var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: var(--space-sm);
+}
+
+.checkoutBtn:hover {
+  background: var(--accent-dim);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    position: static;
+  }
+
+  .item {
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-md);
+  }
+
+  .quantity,
+  .subtotal,
+  .removeBtn {
+    grid-column: 2;
+  }
+
+  .subtotal {
+    text-align: left;
+  }
+}
